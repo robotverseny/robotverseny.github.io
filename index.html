@@ -36,28 +36,29 @@ body, html {
 .bgimg-1 {
   background-image: url('img/bg1.png');
   background-position: center top;
-  min-height: 65%;
+  min-height: 25%;
   background-size: auto;
-  background-color: #464959;  
+  background-color: #242943;  
 }
 
 /* Second image (images) */
 .bgimg-2 {
   background-image: url("img/");
-  min-height: 400px;
+  background-color: #242943;  
+  min-height: 200px;
 }
 
 /* Third image */
 .bgimg-3 {
   background-image: url("img/");
-  background-color: #dedfe6;
-  min-height: 400px;
+  background-color: #242943;
+  min-height: 200px;
 }
 
 /* Fourth image */
 .bgimg-4 {
   background-image: url("img/");
-  min-height: 400px;
+  min-height: 200px;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -101,6 +102,22 @@ body, html {
   color: #242943!important;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #242943;
+  color: white;
+}
 
 </style>
 <body>
@@ -113,6 +130,8 @@ body, html {
     </a>
     <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-home"></i> </a>
     <a href="#eredmenyek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-car-side"></i>  Eredmények</a>
+    <a href="#szabalyzat" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-file"></i>  Szabályzat</a>
+    <a href="https://github.com/robotverseny" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-github"></i>  Github</a>
     <!--
       <a href="#dataset" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-download"></i> DATASET</a>
       <a href="#images" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-th"></i> IMAGES</a>
@@ -122,16 +141,25 @@ body, html {
     -->
   </div>
 
+  
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-home"></i> </a>
     <a href="#eredmenyek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-car-side"></i>  Eredmények</a>
+    <a href="#szabalyzat" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-file"></i>  Szabályzat</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-darkblue-bg w3-xxlarge w3-wide"> <span class="w3-hide-small">Autonóm </span>robotverseny
   </div>
 </div>
 
 <!-- Container (dataset Section) -->
 <div class="w3-content w3-container w3-padding-64" id="dataset">
-  <h3 class="w3-center">Autonóm robot verseny</h3>
+  <!-- <h3 class="w3-center">Autonóm robotverseny</h3> -->
   <div class="w3-row">
     <div class="w3-quarter w3-center"><p>
       <a href="#TODO" target="_blank" class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-play w3-margin-right"></i>
@@ -143,7 +171,7 @@ body, html {
         Kérdés feltevés </br> hírek olvasása</a>
       </p>
     </div>    <div class="w3-quarter w3-center"><p>
-      <a href="#TODO" class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-github w3-margin-right" style="font-size:20px"></i>
+      <a href="https://github.com/robotverseny/megoldas#readme" class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-github w3-margin-right" style="font-size:20px"></i>
         Instrukciók a </br> telepítéshez</a>
       </p>
     </div>    <div class="w3-quarter w3-center"><p>
@@ -171,10 +199,10 @@ body, html {
 
 
 
-<!-- Third Parallax Image with images Text -->
-<div class="bgimg-3 w3-display-container">
+<!-- Second Parallax Image with images Text -->
+<div class="bgimg-2 w3-display-container">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide"><i class="fa fa-gear w3-margin-right"></i>Eredmények</span>
+     <span class="w3-xxlarge w3-text-white w3-wide">🏆 Eredmények</span>
   </div>
 </div>
 
@@ -185,7 +213,16 @@ body, html {
     Aktuális eredmények: 
   </p>
   <p>
-    <iframe width="800" height="400" frameborder="1" scrolling="no" src="https://laesze-my.sharepoint.com/:x:/g/personal/herno_o365_sze_hu/EbY5JHXjEVJDn8F7TQPmToUBI0NTJ1OYlYGEnD2WYPdT2g?e=auWtrP&action=embedview&wdbipreview=true"></iframe>
+    <table>
+<tr><th>Középsikola azonosítója</th> <th>Eredmény</br>(másodperc)</th> <th>Extra pontok</th> <th>Dátum</th></tr>
+<tr><td>H56</td><td>28.641</td><td>(később)</td><td>2022.10.03 (versenyen kívül)</td></tr>
+<tr><td>X62</td><td>27.210</td><td>(később)</td><td>2022.10.03 (versenyen kívül)</td></tr>
+<tr><td>Z92</td><td>21.151</td><td>(később)</td><td>2022.10.03 (versenyen kívül)</td></tr>
+<tr><td>A12</td><td>31.423</td><td>(később)</td><td>2022.10.03 (versenyen kívül)</td></tr>
+<tr><td>H56</td><td>28.023</td><td>(később)</td><td>2022.10.04 (versenyen kívül)</td></tr>
+<tr><td>X62</td><td>N/A</td><td>N/A</td><td>2022.10.04 (versenyen kívül)</td></tr>
+    </table>
+
   </p>
   <div class="w3-center">
     <img src="img/jkk01.svg" alt="JKK logo" style="width:250px;">
@@ -201,10 +238,53 @@ body, html {
   </div>
 </div>
 
+
+<!-- Third Parallax Image with images Text -->
+<div class="bgimg-3 w3-display-container">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">📜 Szabályzat</span>
+  </div>
+</div>
+
+<!-- Container (szabályzat) -->
+<div class="w3-content w3-container w3-padding-64" id="szabalyzat">
+  <p>
+    Magyarországon középiskolai tanulmányokat folytató
+    diákokból álló, háromtagú csapatok jelentkezését várjuk. A
+    Versenyre történő jelentkezésnek szakmai, ismeretekre
+    vonatkozó előfeltétele, előkövetelménye nincs.
+  </p>
+  <p  class="w3-text-gray">
+    Az alap megoldás mindenki számára elérhető: <a href="https://github.com/robotverseny/megoldas">github.com/robotverseny/megoldas</a>. 
+    Ez egyszerű falkövetést jelent lézerszkenner segítségével, de a megoldás hangolásával is sokat lehet javítani az eredményen, minimális programozás ismeretekkel.
+  </p>
+  <p>
+  A megoldások jóságát egy automatikus rendszer értékeli ki, de a végén a zsűri manuális ellenőrzés során <u>extra pontokat</u> ad, így alakul ki a végleges sorrend. 
+  Ezek az extra pontok a következőkért adhatók:
+  <ul>
+    <li>Falkövetés helyett középen haladás.</li>
+    <li>Modernebb szabályzó: pl.: pure-pursuit / RRT / MPC.</li>
+    <li>Adaptív sebesség felvétele valamilyen logika (fuzzy, szabály alapú, kinematikailag számított alapon stb) egyenesekben gyorsabban, kanyarokban lassabban haladó jármű.</li>
+    <li>Kamera alapú tájékozódás.</li>
+    <li>Fejlett trajektóriatervező: pl.:<a href="https://github.com/TUMFTM/GraphBasedLocalTrajectoryPlanner">github.com/TUMFTM/GraphBasedLocalTrajectoryPlanner</a>.</li>
+    <li>SLAM (lokalizáció és térképépítés).</li> 
+    <li>Globális útvonal (trajektória) optimalizáció az optimális ívek tartása miatt pl.: <a href="https://github.com/TUMFTM/global_racetrajectory_optimization">github.com/TUMFTM/global_racetrajectory_optimization</a> </li>
+    <li>A megoldás vizualizációja (RVIZ config), dokumentálása.</li>
+    <li>Egyéb olyan ötlet, ami a verseny szempontjából előnyös.</li> 
+  </ul>
+  </p>
+  <p>
+    A megoldásoknak nem kell feltétlen sajátnak lennie, de csak akkor fogadható átvett megoldás, ha a nyílt forráskódú licencelés jogilag is megállja a helyét.
+    Tehát például jelezeni kell, honnan lett átvéve a megoldás, milyen licencű, stb. 
+  </p>
+</div>
+
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-darkblue-bg w3-padding-64 w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Fel</a>
   <div class="w3-section">
+    <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://github.com/robotverseny"><i class="fab fa-github"></i> Robotverseny</a></div>
     <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.youtube.com/jkk-sze-research"><i class="fab fa-youtube"></i> JKK</a></div>
     <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.instagram.com/jkk.sze/"><i class="fab fa-instagram"></i> JKK</a></div>
   </div>

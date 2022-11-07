@@ -20,6 +20,7 @@ body, html {
   height: 100%;
   color: #242943;
   line-height: 1.8;
+  overflow:auto;
 }
 
 
@@ -127,7 +128,7 @@ th {
 }
 
 </style>
-<body>
+<body style="overflow:auto;">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -169,7 +170,7 @@ th {
   <!-- <h3 class="w3-center">Autonóm robotverseny</h3> -->
   <div class="w3-row">
     <div class="w3-quarter w3-center"><p>
-      <a href="#TODO" target="_blank" class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-play w3-margin-right"></i>
+      <a href="https://felveteli.sze.hu/robotverseny-feladat-feltoltese" target="_blank" class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-play w3-margin-right"></i>
         Megoldás </br> beküldése </a>
       </p>
     </div>
@@ -216,22 +217,13 @@ th {
 
 <!-- Container (mission Section) -->
 <div class="w3-content w3-container w3-padding-64" id="eredmenyek">
-  <!--<h3 class="w3-center">OUR MISSION</h3> -->
-  <p>
-    Aktuális eredmények: 
-  </p>
-  <p>
-    <table>
-<tr><th>Középsikola azonosítója</th> <th>Eredmény</br>(sebesség m/s)</th> <th>Extra pontok</th> <th>Dátum</th></tr>
-<tr><td>H56</td><td>0.641</td><td>(később)</td><td>2022.10.03 (versenyen kívül)</td></tr>
-<tr><td>X62</td><td>0.610</td><td>(később)</td><td>2022.10.03 (versenyen kívül)</td></tr>
-<tr><td>Z92</td><td>0.151</td><td>(később)</td><td>2022.10.03 (versenyen kívül)</td></tr>
-<tr><td>A12</td><td>0.923</td><td>(később)</td><td>2022.10.03 (versenyen kívül)</td></tr>
-<tr><td>H56</td><td>1.023</td><td>(később)</td><td>2022.10.04 (versenyen kívül)</td></tr>
-<tr><td>X62</td><td>N/A</td><td>N/A</td><td>2022.10.04 (versenyen kívül)</td></tr>
-    </table>
+  <div style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;">
+    <p>
+      Aktuális <a href="https://robotverseny.github.io/eredmenyek.html">eredmények</a>: 
+    </p>
+  <iframe src="eredmenyek.html" scrolling="yes" height="800" width="90%" title="eredmenyek" style="border:none;overflow:visible;overflow-y:scroll;"></iframe>
 
-  </p>
+  </div>
   <div class="w3-center">
     <img src="img/jkk01.svg" alt="JKK logo" style="width:250px;">
     <span class="w3-hide-small">

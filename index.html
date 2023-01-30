@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Autonóm robot verseny</title>
+<title>Autonóm robotverseny</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -144,6 +144,9 @@ th {
     <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-home"></i> </a>
     <a href="#eredmenyek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-car-side"></i>  Eredmények</a>
     <a href="#szabalyzat" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-file"></i>  Szabályzat</a>
+
+
+    <a href="#english" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-flag-checkered"></i> English</a>
     <a href="https://github.com/robotverseny" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-github"></i>  Github</a>
     <!--
       <a href="#dataset" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-download"></i> DATASET</a>
@@ -207,8 +210,8 @@ th {
     robotversenyt hirdetnek középiskolai csapatok számára. Az 
     Autonóm Robotverseny egy középiskolás diákok számára 
     szervezett kétfordulós műszaki-informatikai verseny, 
-    melynek első fordulója online kerül lebonyolításra, majd a 10 
-    döntőbe kvalifikált csapat személyesen (a helyszíni fordulóben) méri össze tudását az 
+    melynek első fordulója szimulációban (<i>online forduló</i>) kerül lebonyolításra, majd a maximum 10 
+    döntőbe kvalifikált csapat személyesen (<i>a helyszíni forduló</i>) méri össze tudását az 
     országos döntőben. A program célja lehetőséget biztosítani 
     közép-iskolás diákok számára, hogy megismerjék az 
     önvezető járművekhez kapcsolódó műszaki és informatikai 
@@ -268,6 +271,16 @@ th {
     Versenyre történő jelentkezésnek szakmai, ismeretekre
     vonatkozó előfeltétele, előkövetelménye nincs.
   </p>
+  <p> A verseny két fordulóból áll:
+    <ul>
+      <li>Online forduló, ahol egy szimulátroban versenyeznek a csapatok.</li>
+      <li>Helyszíni forduló, ahol az előzőleg szimulált robot valós verziójával, valós pályán versenyezjetnek.</li>
+    </ul>
+  </p>
+  <p>
+    Az első szezon online fordulója 2022-ben, helyszíni fordulója pedig 2023-ban zajlik.
+  </p>
+
   <p  class="w3-text-gray">
     Az online forduló alap megoldása mindenki számára elérhető: <a href="https://robotverseny.github.io/megoldas/">https://robotverseny.github.io/megoldas/</a>. <br />
     Hasnonlóképp a helyszíni forduló megoldása is elérhető: <a href="https://robotverseny.github.io/megoldas_zala23/">https://robotverseny.github.io/megoldas_zala23/</a>.  <br />
@@ -293,6 +306,61 @@ th {
     Tehát például jelezeni kell, honnan lett átvéve a megoldás, milyen licencű, stb. 
   </p>
 </div>
+
+
+
+
+<div class="bgimg-3 w3-display-container">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">🏁 English</span>
+  </div>
+</div>
+
+<!-- Container (English) -->
+<div class="w3-content w3-container w3-padding-64" id="english">
+  <p>
+    Autonomous robotrace (Autonóm robotverseny) is a hungarian competionon organized by the Széchenyi István University and its partners. 
+    It is inspired by the <a href="https://f1tenth.org/">F1/10</a> Autonomous Racing competition. Any hungarian middle school / junior secondary school can participate.
+  </p>
+  <p> The competition consists of two rounds:
+    <ul>
+      <li>Online round, where teams compete in a simulator.</li>
+      <li>On-site round, where they can compete with the real version of the previously simulated robot on a real track.</li>
+    </ul>
+  </p>
+  <p  class="w3-text-gray">
+    The base solution (in hungarian) for the online round is avaiable here: <a href="https://robotverseny.github.io/megoldas/">https://robotverseny.github.io/megoldas/</a>. <br />
+    Similarly, the solution for the on-site round is available: <a href="https://robotverseny.github.io/megoldas_zala23/">https://robotverseny.github.io/megoldas_zala23/</a>.  <br />
+  </p>
+  <p>
+  </p>
+  <p>
+
+    <div class="w2-row-padding w3-center">
+      <div class="w3-col m6">
+        <img src="https://raw.githubusercontent.com/robotverseny/megoldas_zala23/main/etc/wheeltec_roboworks_ack01.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="On-site">
+      </div>
+  
+      <div class="w3-col m6">
+        <img src="https://raw.githubusercontent.com/sze-info/racecar_gazebo/master/assets/images/gazebo_track_race01.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Online">
+      </div>
+    </div>
+
+  </p>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+</div>
+
+
 
 
 <!-- Footer -->

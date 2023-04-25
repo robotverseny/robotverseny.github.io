@@ -11,430 +11,551 @@
 <link rel="manifest" href="img/site.webmanifest">
 <script src='https://kit.fontawesome.com/4753f2df7b.js' crossorigin='anonymous'></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
 
-/* #242943 #50ADC9 */
+  /* #242943 #50ADC9 */
 
-body,h1,h2,h3,h4,h5,h6 {font-family: 'IBM Plex Sans', sans-serif;}
-body, html {
-  height: 100%;
-  color: #242943;
-  line-height: 1.8;
-  overflow:auto;
-}
-
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #bdc0ca;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('img/bg1.png');
-  background-position: center top;
-  min-height: 25%;
-  background-size: auto;
-  background-color: #242943;  
-}
-
-/* Second image (images) */
-.bgimg-2 {
-  background-image: url("img/");
-  background-color: #242943;  
-  min-height: 200px;
-}
-
-/* Third image */
-.bgimg-3 {
-  background-image: url("img/");
-  background-color: #242943;
-  min-height: 200px;
-}
-
-/* Fourth image */
-.bgimg-4 {
-  background-image: url("img/");
-  min-height: 200px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'IBM Plex Sans', sans-serif;
   }
-}
 
-.w3-bar{
-  background-color: #242943!important;
+  body,
+  html {
+    height: 100%;
+    color: #242943;
+    line-height: 1.8;
+    overflow: auto;
+  }
 
-}
 
-.w3-display-midleft {
+  /* Create a Parallax Effect */
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3,
+  .bgimg-4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #bdc0ca;
+  }
+
+  /* First image (Logo. Full height) */
+  .bgimg-1 {
+    background-image: url('img/bg1.png');
+    background-position: center top;
+    min-height: 25%;
+    background-size: auto;
+    background-color: #242943;
+  }
+
+  /* Second image (images) */
+  .bgimg-2 {
+    background-image: url("img/");
+    background-color: #242943;
+    min-height: 200px;
+  }
+
+  /* Third image */
+  .bgimg-3 {
+    background-image: url("img/");
+    background-color: #242943;
+    min-height: 200px;
+  }
+
+  /* Fourth image */
+  .bgimg-4 {
+    background-image: url("img/");
+    min-height: 200px;
+  }
+
+  .w3-wide {
+    letter-spacing: 10px;
+  }
+
+  .w3-hover-opacity {
+    cursor: pointer;
+  }
+
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1600px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: scroll;
+      min-height: 400px;
+    }
+  }
+
+  .w3-bar {
+    background-color: #242943 !important;
+
+  }
+
+  .w3-display-midleft {
     position: absolute;
     top: 50%;
     left: 25%;
-    transform: translate(-50%,-25%);
-    -ms-transform: translate(-50%,-25%);
-}
+    transform: translate(-50%, -25%);
+    -ms-transform: translate(-50%, -25%);
+  }
 
-.w3-darkblue-bg {
-    background-color: #242943!important;
+  .w3-darkblue-bg {
+    background-color: #242943 !important;
     color: #ffffff;
-}
+  }
 
-.w3-hover-opacity:hover {
+  .w3-hover-opacity:hover {
     opacity: 0.80;
-}
+  }
 
-.w3-lightblue {
-  color: #50ADC9!important;
-}
+  .w3-lightblue {
+    color: #50ADC9 !important;
+  }
 
-.w3-darkblue {
-    color: #242943!important;
-}
+  .w3-darkblue {
+    color: #242943 !important;
+  }
 
-.w3-hover-lightblue:hover {
-  background-color: #50ADC9!important;
-  color: #242943!important;
-}
+  .w3-hover-lightblue:hover {
+    background-color: #50ADC9 !important;
+    color: #242943 !important;
+  }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-th, td {
-  text-align: left;
-  padding: 8px;
-}
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
 
-tr:nth-child(even){background-color: #f2f2f2}
+  tr:nth-child(even) {
+    background-color: #f2f2f2
+  }
 
-th {
-  background-color: #242943;
-  color: white;
-}
+  th {
+    background-color: #242943;
+    color: white;
+  }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 </style>
+
 <body style="overflow:auto;">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-home"></i> </a>
-    <a href="#eredmenyek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-car-side"></i>  Eredmények</a>
-    <a href="#szabalyzat" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-file"></i>  Szabályzat</a>
-    <a href="#english" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-flag-checkered"></i> English</a>
-    <a href="#events" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-calendar-check-o"></i> Események</a>
-    <a href="https://github.com/robotverseny" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-github"></i>  Github</a>
-    <a href="https://felveteli.sze.hu/robotverseny" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-university" aria-hidden="true"></i> felveteli.sze.hu</a>
-    <!--
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-white w3-hover-black w3-hide-medium w3-hide-large w3-right"
+        href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-home"></i> </a>
+      <a href="#eredmenyek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
+          class="fa fa-car-side"></i> Eredmények</a>
+      <a href="#szabalyzat" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
+          class="fa fa-file"></i> Szabályzat</a>
+      <a href="#english" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
+          class="fa fa-flag-checkered"></i> English</a>
+      <a href="#events" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
+          class="fa fa-calendar-check-o"></i> Események</a>
+      <a href="#kepek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
+          class="fa fa-camera"></i> Képek</a>
+          <a href="https://github.com/robotverseny"
+        class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-github"></i>
+        Github</a>
+      <a href="https://felveteli.sze.hu/robotverseny"
+        class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-university"
+          aria-hidden="true"></i> felveteli.sze.hu</a>
+      <!--
       <a href="#dataset" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-download"></i> DATASET</a>
       <a href="#images" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-th"></i> IMAGES</a>
       <a href="#videos" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-play"></i> VIDEOS</a>
       <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-envelope"></i> CONTACT</a>
       <a href="https://github.com/szenergy/szenergy-public-resources/wiki" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-wikipedia-w"></i> WIKI</a>
     -->
-  </div>
-
-  
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-home"></i> </a>
-    <a href="#eredmenyek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-car-side"></i>  Eredmények</a>
-    <a href="#szabalyzat" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-file"></i>  Szabályzat</a>
-  </div>
-</div>
-
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-darkblue-bg w3-xxlarge w3-wide"> <span class="w3-hide-small">Autonóm </span>robotverseny
-  </div>
-</div>
-
-<!-- Container (dataset Section) -->
-<div class="w3-content w3-container w3-padding-64" id="dataset">
-  <!-- <h3 class="w3-center">Autonóm robotverseny</h3> -->
-  <div class="w3-row">
-    <div class="w3-third w3-center"><p>
-      <a href="https://felveteli.sze.hu/robotverseny-feladat-feltoltese" target="_blank" class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-play w3-margin-right"></i>
-        Megoldás </br> beküldése </a>
-      </p>
     </div>
-    <div class="w3-third w3-center"><p>
-      <a href="https://github.com/robotverseny/robotverseny/discussions" class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-github w3-margin-right"></i>
-        Kérdés feltevés, </br> hírek olvasása</a>
-      </p>
-    </div>    <div class="w3-third w3-center"><p>
-        <a href="https://horverno.github.io/ros-gyakorlatok/" class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-robot w3-margin-right"></i>
+
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-home"></i> Kezdőlap
+      </a>
+      <a href="#eredmenyek" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-car-side"></i>
+        Eredmények</a>
+      <a href="#szabalyzat" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-file"></i>
+        Szabályzat</a>
+      <a href="https://felveteli.sze.hu/robotverseny" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i
+          class="fa fa-university" aria-hidden="true"></i> felveteli.sze.hu</a>
+    </div>
+  </div>
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-darkblue-bg w3-xxlarge w3-wide"> <span class="w3-hide-small">Autonóm
+        </span>robotverseny
+    </div>
+  </div>
+
+  <!-- Container (dataset Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="dataset">
+    <!-- <h3 class="w3-center">Autonóm robotverseny</h3> -->
+    <div class="w3-row">
+      <div class="w3-third w3-center">
+        <p>
+          <a href="https://felveteli.sze.hu/robotverseny-feladat-feltoltese" target="_blank"
+            class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i
+              class="fa fa-play w3-margin-right"></i>
+            Megoldás </br> beküldése </a>
+        </p>
+      </div>
+      <div class="w3-third w3-center">
+        <p>
+          <a href="https://github.com/robotverseny/robotverseny/discussions"
+            class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i
+              class="fa fa-github w3-margin-right"></i>
+            Kérdés feltevés, </br> hírek olvasása</a>
+        </p>
+      </div>
+      <div class="w3-third w3-center">
+        <p>
+          <a href="https://horverno.github.io/ros-gyakorlatok/"
+            class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i
+              class="fa fa-robot w3-margin-right"></i>
             Hasznos </br> ROS oktatóanyagok</a>
         </p>
-    </div>
-    <div class="w3-row">    
-        <div class="w3-half w3-center"><p>
-            <a href="https://robotverseny.github.io/megoldas/" class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-github w3-margin-right" style="font-size:20px"></i>
-                Instrukciók az </br> online fordulóhoz</a>
-            </p>
+      </div>
+      <div class="w3-row">
+        <div class="w3-half w3-center">
+          <p>
+            <a href="https://robotverseny.github.io/megoldas/"
+              class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round" style="font-size:20px"><i
+                class="fa fa-github w3-margin-right" style="font-size:20px"></i>
+              Instrukciók az </br> online fordulóhoz</a>
+          </p>
         </div>
-        <div class="w3-half w3-center"><p>
-            <a href="https://robotverseny.github.io/megoldas_zala23/" class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round" style="font-size:20px"><i class="fa fa-github w3-margin-right" style="font-size:20px"></i>
-                Instrukciók a </br> helyszíni fordulóhoz</a>
-            </p>
+        <div class="w3-half w3-center">
+          <p>
+            <a href="https://robotverseny.github.io/megoldas_zala23/"
+              class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round" style="font-size:20px"><i
+                class="fa fa-github w3-margin-right" style="font-size:20px"></i>
+              Instrukciók a </br> helyszíni fordulóhoz</a>
+          </p>
         </div>
+      </div>
     </div>
-  </div>
-  
-  <p class="w3-text-gray">
-    A Széchenyi István Egyetem és partnerei autonóm 
-    robotversenyt hirdetnek középiskolai csapatok számára. Az 
-    Autonóm Robotverseny egy középiskolás diákok számára 
-    szervezett kétfordulós műszaki-informatikai verseny, 
-    melynek első fordulója szimulációban (<i>online forduló</i>) kerül lebonyolításra, majd a maximum 10 
-    döntőbe kvalifikált csapat személyesen (<i>a helyszíni forduló</i>) méri össze tudását az 
-    országos döntőben. A program célja lehetőséget biztosítani 
-    középiskolás diákok számára, hogy megismerjék az 
-    önvezető járművekhez kapcsolódó műszaki és informatikai 
-    kihívásokat számítógépes szimulációk, valamint kisméretű, 
-    alacsony sebességű kültéri mobil robotplatformok alkalmazása által. 
-  </p>
-  <p><img src="img/robotanim01.gif" class="center"></p>
 
-
-</div>
-
-
-
-<!-- Second Parallax Image with images Text -->
-<div class="bgimg-2 w3-display-container">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">🏆 Eredmények</span>
-  </div>
-</div>
-
-<!-- Container (mission Section) -->
-<div class="w3-content w3-container w3-padding-64" id="eredmenyek">
-  <div style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;">
-    <p>
-      Aktuális <a href="https://robotverseny.github.io/eredmenyek.html">eredmények</a>: 
+    <p class="w3-text-gray">
+      A Széchenyi István Egyetem és partnerei autonóm
+      robotversenyt hirdetnek középiskolai csapatok számára. Az
+      Autonóm Robotverseny egy középiskolás diákok számára
+      szervezett kétfordulós műszaki-informatikai verseny,
+      melynek első fordulója szimulációban (<i>online forduló</i>) kerül lebonyolításra, majd a maximum 10
+      döntőbe kvalifikált csapat személyesen (<i>a helyszíni forduló</i>) méri össze tudását az
+      országos döntőben. A program célja lehetőséget biztosítani
+      középiskolás diákok számára, hogy megismerjék az
+      önvezető járművekhez kapcsolódó műszaki és informatikai
+      kihívásokat számítógépes szimulációk, valamint kisméretű,
+      alacsony sebességű kültéri mobil robotplatformok alkalmazása által.
     </p>
-  <iframe src="eredmenyek.html" scrolling="yes" height="600" width="100%" title="eredmenyek" style="border:none;overflow:visible;overflow-y:scroll;"></iframe>
+    <p><img src="img/robotanim01.gif" class="center"></p>
+
 
   </div>
-  <div class="w3-center">
-    <img src="img/jkk01.svg" alt="JKK logo" style="width:250px;">
-    <span class="w3-hide-small">
-      <img src="img/jkk02.svg" alt="JKK logo" style="width:250px;"> <br/>
-    </span>
-    <!--
+
+
+
+  <!-- Second Parallax Image with images Text -->
+  <div class="bgimg-2 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">🏆 Eredmények</span>
+    </div>
+  </div>
+
+  <!-- Container (mission Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="eredmenyek">
+    <div style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;">
+      <p>
+        Aktuális <a href="https://robotverseny.github.io/eredmenyek.html">eredmények</a>:
+      </p>
+      <iframe src="eredmenyek.html" scrolling="yes" height="600" width="100%" title="eredmenyek"
+        style="border:none;overflow:visible;overflow-y:scroll;"></iframe>
+
+    </div>
+    <div class="w3-center">
+      <img src="img/jkk01.svg" alt="JKK logo" style="width:250px;">
+      <span class="w3-hide-small">
+        <img src="img/jkk02.svg" alt="JKK logo" style="width:250px;"> <br />
+      </span>
+      <!--
     <img src="img/sze01.svg" alt="SZE logo" style="width:250px;">
     <span class="w3-hide-small">
       <img src="img/sze02.svg" alt="SZE logo" style="width:250px;">
     </span>
     -->
+    </div>
   </div>
-</div>
 
 
-<!-- Third Parallax Image with images Text -->
-<div class="bgimg-3 w3-display-container">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">📜 Szabályzat</span>
+  <!-- Third Parallax Image with images Text -->
+  <div class="bgimg-3 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">📜 Szabályzat</span>
+    </div>
   </div>
-</div>
 
-<!-- Container (szabályzat) -->
-<div class="w3-content w3-container w3-padding-64" id="szabalyzat">
-  <p>
-    Magyarországon középiskolai tanulmányokat folytató
-    diákokból álló, háromtagú csapatok jelentkezését várjuk. A
-    Versenyre történő jelentkezésnek szakmai, ismeretekre
-    vonatkozó előfeltétele, előkövetelménye nincs.
-  </p>
-  <p> A verseny két fordulóból áll:
+  <!-- Container (szabályzat) -->
+  <div class="w3-content w3-container w3-padding-64" id="szabalyzat">
+    <p>
+      Magyarországon középiskolai tanulmányokat folytató
+      diákokból álló, háromtagú csapatok jelentkezését várjuk. A
+      Versenyre történő jelentkezésnek szakmai, ismeretekre
+      vonatkozó előfeltétele, előkövetelménye nincs.
+    </p>
+    <p> A verseny két fordulóból áll:
     <ul>
       <li>Online forduló, ahol egy szimulátorban versenyeznek a csapatok.</li>
       <li>Helyszíni forduló, ahol az előzőleg szimulált robot valós verziójával, valós pályán versenyezhetnek.</li>
     </ul>
-  </p>
-  <p>
-    Az első szezon online fordulója 2022-ben, helyszíni fordulója pedig 2023-ban zajlik.
-  </p>
+    </p>
+    <p>
+      Az első szezon online fordulója 2022-ben, helyszíni fordulója pedig 2023-ban zajlik.
+    </p>
 
-  <p  class="w3-text-gray">
-    Az online forduló alap megoldása mindenki számára elérhető: <a href="https://robotverseny.github.io/megoldas/">https://robotverseny.github.io/megoldas/</a>. <br />
-    Hasonlóképp a helyszíni forduló megoldása is elérhető: <a href="https://robotverseny.github.io/megoldas_zala23/">https://robotverseny.github.io/megoldas_zala23/</a>.  <br />
-    Mindkét forduló (online és helyszíni) egyszerű falkövetést jelent lézerszkenner segítségével, de a megoldás hangolásával is sokat lehet javítani az eredményen, minimális programozás ismeretekkel.
-  </p>
-  <p>
-  A megoldások jóságát egy automatikus rendszer értékeli ki, de a végén a zsűri manuális ellenőrzés során <u>extra pontokat</u> ad, így alakul ki a végleges sorrend. 
-  Ezek az extra pontok a következőkért adhatók:
-  <ul>
-    <li>Falkövetés helyett középen haladás.</li>
-    <li>Modernebb szabályzó: pl.: pure-pursuit / RRT / MPC.</li>
-    <li>Adaptív sebesség felvétele valamilyen logika (fuzzy, szabály alapú, kinematikailag számított alapon stb) egyenesekben gyorsabban, kanyarokban lassabban haladó jármű.</li>
-    <li>Kamera alapú tájékozódás.</li>
-    <li>Fejlett trajektóriatervező: pl.:<a href="https://github.com/TUMFTM/GraphBasedLocalTrajectoryPlanner">github.com/TUMFTM/GraphBasedLocalTrajectoryPlanner</a>.</li>
-    <li>SLAM (lokalizáció és térképépítés).</li> 
-    <li>Globális útvonal (trajektória) optimalizáció az optimális ívek tartása miatt pl.: <a href="https://github.com/TUMFTM/global_racetrajectory_optimization">github.com/TUMFTM/global_racetrajectory_optimization</a> </li>
-    <li>A megoldás vizualizációja (RVIZ config), dokumentálása.</li>
-    <li>Egyéb olyan ötlet, ami a verseny szempontjából előnyös.</li> 
-  </ul>
-  </p>
-  <p>
-    A megoldásoknak nem kell feltétlen sajátnak lennie, de csak akkor fogadható átvett megoldás, ha a nyílt forráskódú licencelés jogilag is megállja a helyét.
-    Tehát például jelezeni kell, honnan lett átvéve a megoldás, milyen licencű, stb. 
-  </p>
-</div>
-
-
-<div class="bgimg-3 w3-display-container">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">🚀 Események / Events </span>
+    <p class="w3-text-gray">
+      Az online forduló alap megoldása mindenki számára elérhető: <a
+        href="https://robotverseny.github.io/megoldas/">https://robotverseny.github.io/megoldas/</a>. <br />
+      Hasonlóképp a helyszíni forduló megoldása is elérhető: <a
+        href="https://robotverseny.github.io/megoldas_zala23/">https://robotverseny.github.io/megoldas_zala23/</a>.
+      <br />
+      Mindkét forduló (online és helyszíni) egyszerű falkövetést jelent lézerszkenner segítségével, de a megoldás
+      hangolásával is sokat lehet javítani az eredményen, minimális programozás ismeretekkel.
+    </p>
+    <p>
+      A megoldások jóságát egy automatikus rendszer értékeli ki, de a végén a zsűri manuális ellenőrzés során <u>extra
+        pontokat</u> ad, így alakul ki a végleges sorrend.
+      Ezek az extra pontok a következőkért adhatók:
+    <ul>
+      <li>Falkövetés helyett középen haladás.</li>
+      <li>Modernebb szabályzó: pl.: pure-pursuit / RRT / MPC.</li>
+      <li>Adaptív sebesség felvétele valamilyen logika (fuzzy, szabály alapú, kinematikailag számított alapon stb)
+        egyenesekben gyorsabban, kanyarokban lassabban haladó jármű.</li>
+      <li>Kamera alapú tájékozódás.</li>
+      <li>Fejlett trajektóriatervező: pl.:<a
+          href="https://github.com/TUMFTM/GraphBasedLocalTrajectoryPlanner">github.com/TUMFTM/GraphBasedLocalTrajectoryPlanner</a>.
+      </li>
+      <li>SLAM (lokalizáció és térképépítés).</li>
+      <li>Globális útvonal (trajektória) optimalizáció az optimális ívek tartása miatt pl.: <a
+          href="https://github.com/TUMFTM/global_racetrajectory_optimization">github.com/TUMFTM/global_racetrajectory_optimization</a>
+      </li>
+      <li>A megoldás vizualizációja (RVIZ config), dokumentálása.</li>
+      <li>Egyéb olyan ötlet, ami a verseny szempontjából előnyös.</li>
+    </ul>
+    </p>
+    <p>
+      A megoldásoknak nem kell feltétlen sajátnak lennie, de csak akkor fogadható átvett megoldás, ha a nyílt forráskódú
+      licencelés jogilag is megállja a helyét.
+      Tehát például jelezeni kell, honnan lett átvéve a megoldás, milyen licencű, stb.
+    </p>
   </div>
-</div>
 
-<!-- Container (events) -->
-<div class="w3-content w3-container w3-padding-64" id="events">
-  <p>
-    <i>Aktuális esemény:</i>
-  </p>
-  <p> 
-    <ul>
-      <li>I. Autonóm robotverseny - helyszíni forduló - 2023. április 20-21. (<a href = "https://www.google.com/maps/place/ZalaZone/@46.8895951,16.8369234,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipPzUe69ewEva-5tzBV9Sjij_FlLPWEf7FjKFa2S!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPzUe69ewEva-5tzBV9Sjij_FlLPWEf7FjKFa2S%3Dw203-h152-k-no!7i1440!8i1080!9m2!1b1!2i40!4m7!3m6!1s0x476929598d135193:0x5681bfbee9c4ee6c!8m2!3d46.8895951!4d16.8369234!10e5!16s%2Fg%2F11gjs1rmcm">ZalaZone Járműipari Tesztpálya, Zalaegerszeg</a>) </li>
-    </ul>
-
-  </p>
-  <p  class="w3-text-gray">
-  <i>Korábbi események:</i>
-  </p>
-    <ul>
-      <li>I. Autonóm robotverseny - online forduló -  2022. november 19-tól - december 12-ig </li>
-    </ul>
-  </p>
-</div>
-
-
-
-
-
-
-<div class="bgimg-3 w3-display-container">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">🏁 English</span>
+  <div class="bgimg-3 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">📷 Képek / Gallery </span>
+    </div>
   </div>
-</div>
 
-<!-- Container (English) -->
-<div class="w3-content w3-container w3-padding-64" id="english">
-  <p>
-    Autonomous robotrace (Autonóm robotverseny) is a hungarian competition organized by the Széchenyi István University and its partners. 
-    It is inspired by the <a href="https://f1tenth.org/">F1/10</a> Autonomous Racing competition. Any hungarian middle school / junior secondary school can participate.
-  </p>
-  <p> The competition consists of two rounds:
-    <ul>
-      <li>Online round, where teams compete in a simulator.</li>
-      <li>On-site round, where they can compete with the real version of the previously simulated robot on a real track.</li>
-    </ul>
-  </p>
-  <p  class="w3-text-gray">
-    The base solution (in hungarian) for the online round is avaiable here: <a href="https://robotverseny.github.io/megoldas/">https://robotverseny.github.io/megoldas/</a>. <br />
-    Similarly, the solution for the on-site round is available: <a href="https://robotverseny.github.io/megoldas_zala23/">https://robotverseny.github.io/megoldas_zala23/</a>.  <br />
-  </p>
-  <p>
-  </p>
-  <p>
+  <!-- Container (Gallery) -->
+  <div class="w3-content w3-container w3-padding-64" id="kepek">
+    <p>
 
     <div class="w2-row-padding w3-center">
       <div class="w3-col m6">
-        <img src="https://raw.githubusercontent.com/robotverseny/megoldas_zala23/main/etc/wheeltec_roboworks_ack01.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="On-site">
+        <img src="img/2023_001.jpg" style="width:80%; margin:10px" onclick="onClick(this)" class="w3-hover-opacity" alt="2023">
       </div>
-  
+
       <div class="w3-col m6">
-        <img src="https://raw.githubusercontent.com/sze-info/racecar_gazebo/master/assets/images/gazebo_track_race01.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Online">
+        <img src="img/2023_002.jpg" style="width:80%; margin:10px" onclick="onClick(this)" class="w3-hover-opacity" alt="2023">
+      </div>
+      <p><br /></p>
+      <div class="w3-col m6">
+        <img src="img/2023_003.jpg" style="width:80%; margin:10px" onclick="onClick(this)" class="w3-hover-opacity" alt="2023">
+      </div>
+
+      <div class="w3-col m6">
+        <img src="img/2023_004.jpg" style="width:80%; margin:10px" onclick="onClick(this)" class="w3-hover-opacity" alt="2023">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="bgimg-3 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">🚀 Események / Events </span>
+    </div>
+  </div>
+
+
+
+    <!-- Container (events) -->
+    <div class="w3-content w3-container w3-padding-64" id="events">
+      <p>
+        <i>Aktuális esemény:</i>
+      </p>
+      <p>
+      <ul>
+        <li>II. Autonóm robotverseny - online forduló: Időpont bejelentése később. </li>
+
+      </ul>
+        
+      </p>
+      <p class="w3-text-gray">
+        <i>Korábbi események:</i>
+      </p>
+      <ul>
+          <li>I. Autonóm robotverseny - helyszíni forduló - 2023. április 20-21. (<a
+              href="https://www.google.com/maps/place/ZalaZone/@46.8895951,16.8369234,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipPzUe69ewEva-5tzBV9Sjij_FlLPWEf7FjKFa2S!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPzUe69ewEva-5tzBV9Sjij_FlLPWEf7FjKFa2S%3Dw203-h152-k-no!7i1440!8i1080!9m2!1b1!2i40!4m7!3m6!1s0x476929598d135193:0x5681bfbee9c4ee6c!8m2!3d46.8895951!4d16.8369234!10e5!16s%2Fg%2F11gjs1rmcm">ZalaZone
+              Járműipari Tesztpálya, Zalaegerszeg</a>) </li>
+        <li>I. Autonóm robotverseny - online forduló - 2022. november 19-tól - december 12-ig </li>
+      </ul>
+      </p>
+    </div>
+
+
+
+
+
+
+    <div class="bgimg-3 w3-display-container">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">🏁 English</span>
       </div>
     </div>
 
-  </p>
+    <!-- Container (English) -->
+    <div class="w3-content w3-container w3-padding-64" id="english">
+      <p>
+        Autonomous robotrace (Autonóm robotverseny) is a hungarian competition organized by the Széchenyi István
+        University and its partners.
+        It is inspired by the <a href="https://f1tenth.org/">F1/10</a> Autonomous Racing competition. Any hungarian
+        middle school / junior secondary school can participate.
+      </p>
+      <p> The competition consists of two rounds:
+      <ul>
+        <li>Online round, where teams compete in a simulator.</li>
+        <li>On-site round, where they can compete with the real version of the previously simulated robot on a real
+          track.</li>
+      </ul>
+      </p>
+      <p class="w3-text-gray">
+        The base solution (in hungarian) for the online round is avaiable here: <a
+          href="https://robotverseny.github.io/megoldas/">https://robotverseny.github.io/megoldas/</a>. <br />
+        Similarly, the solution for the on-site round is available: <a
+          href="https://robotverseny.github.io/megoldas_zala23/">https://robotverseny.github.io/megoldas_zala23/</a>.
+        <br />
+      </p>
+      <p>
+      </p>
+      <p>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
+      <div class="w2-row-padding w3-center">
+        <div class="w3-col m6">
+          <img
+            src="https://raw.githubusercontent.com/robotverseny/megoldas_zala23/main/etc/wheeltec_roboworks_ack01.png"
+            style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="On-site">
+        </div>
+
+        <div class="w3-col m6">
+          <img
+            src="https://raw.githubusercontent.com/sze-info/racecar_gazebo/master/assets/images/gazebo_track_race01.png"
+            style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Online">
+        </div>
+      </div>
+
+      </p>
+
+      <!-- Modal for full size images on click-->
+      <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+            class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+          <img id="img01" class="w3-image">
+          <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+      </div>
 
 
-</div>
+    </div>
 
 
 
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-darkblue-bg w3-padding-64 w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Fel</a>
-  <div class="w3-section">
-    <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://github.com/robotverseny"><i class="fab fa-github"></i> Robotverseny</a></div>
-    <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.youtube.com/jkk-sze-research"><i class="fab fa-youtube"></i> JKK</a></div>
-    <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.instagram.com/jkk.sze/"><i class="fab fa-instagram"></i> JKK</a></div>
-  </div>
-  <div class="w3-opacity-max">
-  <p>Powered by <a style="text-decoration:none" href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank">w3.css</a></p>
-  </div>
-</footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-darkblue-bg w3-padding-64 w3-hover-opacity-off">
+      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Fel</a>
+      <div class="w3-section">
+        <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://github.com/robotverseny"><i
+              class="fab fa-github"></i> Robotverseny</a></div>
+        <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.youtube.com/jkk-sze-research"><i
+              class="fab fa-youtube"></i> JKK</a></div>
+        <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.instagram.com/jkk.sze/"><i
+              class="fab fa-instagram"></i> JKK</a></div>
+      </div>
+      <div class="w3-opacity-max">
+        <p>Powered by <a style="text-decoration:none" href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS"
+            target="_blank">w3.css</a></p>
+      </div>
+    </footer>
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+      // Change style of navbar on scroll
+      window.onscroll = function () { myFunction() };
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
 
 </body>
+
 </html>

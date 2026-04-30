@@ -167,12 +167,8 @@
         <i class="fa fa-bars"></i>
       </a>
       <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-home"></i> </a>
-      <a href="#eredmenyek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
-          class="fa fa-car-side"></i> Eredmények</a>
       <a href="#szabalyzat" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
           class="fa fa-file"></i> Szabályzat</a>
-      <a href="#english" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
-          class="fa fa-flag-checkered"></i> English</a>
       <a href="#events" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
           class="fa fa-calendar-check-o"></i> Események</a>
       <a href="#kepek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
@@ -183,6 +179,8 @@
       <a href="https://felveteli.sze.hu/robotverseny"
         class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-university"
           aria-hidden="true"></i> felveteli.sze.hu</a>
+      <a href="#english" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
+        class="fa fa-flag-checkered"></i> English</a>
       <!--
       <a href="#dataset" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-download"></i> DATASET</a>
       <a href="#images" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-th"></i> IMAGES</a>
@@ -197,8 +195,6 @@
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-home"></i> Kezdőlap
       </a>
-      <a href="#eredmenyek" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-car-side"></i>
-        Eredmények</a>
       <a href="#szabalyzat" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-file"></i>
         Szabályzat</a>
       <a href="https://felveteli.sze.hu/robotverseny" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i
@@ -209,94 +205,123 @@
   <!-- First Parallax Image with Logo Text -->
   <div class="bgimg-1 w3-display-container" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-      <span class="w3-center w3-padding-large w3-darkblue-bg w3-xxlarge w3-wide"> <span class="w3-hide-small">Autonóm
-        </span>robotverseny
+      <span class="w3-center w3-padding-large w3-darkblue-bg w3-xxlarge w3-wide"> <span class="w3-hide-small">Future Engineer Autonóm Robotverseny</span>
     </div>
   </div>
 
   <!-- Container (dataset Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="dataset">
-    <!-- <h3 class="w3-center">Autonóm robotverseny</h3> -->
-    <div class="w3-row">
-      <div class="w3-third w3-center">
-        <p>
-          <a href="https://github.com/robotverseny/robotverseny/discussions"
-            class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i
-              class="fa fa-github w3-margin-right"></i>
-            Kérdés feltevés, </br> hírek olvasása</a>
-        </p>
-      </div>
-      <div class="w3-third w3-center">
-        <p>
-          <a href="https://sze-info.github.io/ajr/"
-            class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i
-              class="fa fa-robot w3-margin-right"></i>
-            Hasznos </br> ROS2 oktatóanyagok</a>
-        </p>
-      </div>
-      <div class="w3-third w3-center">
-        <p>
-          <a href="https://jkk-research.github.io/workshops/" target="_blank"
-            class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round" style="font-size:20px"><i
-              class="fa fa-play w3-margin-right"></i>
-            Szimulációs </br> workshop </a>
-        </p>
-      </div>
-      <div class="w3-row">
-        <div class="w3-half w3-center">
-          <p>
-            <a href="https://github.com/robotverseny/megoldas_sim24"
-            class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round" style="font-size:20px; min-width: 50%"><i
-            class="fa fa-github w3-margin-right" style="font-size:20px"></i>
-              Instrukciók az </br> online fordulóhoz</a>
-          </p>
+ <style>
+.button-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 41, 67, 0.95);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.button-card:hover .button-desc {
+  opacity: 1;
+}
+
+/* mobil fallback */
+@media (max-width: 600px) {
+  .button-desc {
+    position: static;
+    opacity: 1;
+    height: auto;
+  }
+}
+</style>
+
+<div class="w3-content w3-container w3-padding-64" id="dataset">
+
+  <div class="w3-row-padding w3-center">
+
+    <div class="w3-col m6 s12" style="margin-bottom:20px;">
+      <a href="https://github.com/robotverseny/robotverseny/discussions"
+         class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round button-card"
+         style="width:100%; min-height:130px; display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:18px; white-space:normal;">
+        <i class="fa fa-github" style="font-size:26px; margin-bottom:8px;"></i>
+        <span>Kérdés feltevés,<br>hírek olvasása</span>
+        <div class="button-desc">
+          Itt tehettek fel kérdéseket a versennyel kapcsolatban, és követhetitek a legfrissebb híreket.
         </div>
-        <div class="w3-half w3-center">
-          <p>
-            <a href="https://robotverseny.github.io/megoldas_gyor24/"
-            class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round" style="font-size:20px; min-width: 50%"><i
-            class="fa fa-github w3-margin-right" style="font-size:20px"></i>
-          Instrukciók a </br> helyszíni versenyhez</a>
-          </p>
-        </div>
-      </div>
+      </a>
     </div>
 
-    <p class="w3-text-gray">
-      A Széchenyi István Egyetem és partnerei országos szintű autonóm
-      robotversenyt hirdetnek középiskolai csapatok számára. Az
-      Autonóm Robotverseny egy középiskolás diákok számára
-      szervezett műszaki-informatikai verseny,
-      amely megszervezsére kerülhet szimuláció segítségével (<i>online verseny</i>),  vagy valós robotokkal (<i>a helyszíni verseny</i>). A program célja lehetőséget biztosítani
-      középiskolás diákok számára, hogy megismerjék az
-      önvezető járművekhez kapcsolódó műszaki és informatikai
-      kihívásokat számítógépes szimulációk, valamint kisméretű,
-      alacsony sebességű kültéri mobil robotplatformok alkalmazása által.
-      <br />
-      Hírek a korábbi évek versenyeiről:
-    <ul>
-      <li><a
-          href="https://admissions.sze.hu/sze-autonomous-robotic-vehicles-programmed-by-competing-students-at-zalazone">admissions.sze.hu/sze-autonomous-robotic-vehicles-programmed-by-competing-students-at-zalazone</a>
-      </li>
-      <li><a
-          href="https://www.egerszegihirek.hu/helyi-hirek/autonom-robotversenyt-rendeztek-zalaegerszegen">egerszegihirek.hu/helyi-hirek/autonom-robotversenyt-rendeztek-zalaegerszegen</a>
-      </li>
-      <li><a
-          href="https://www.uni.sze.hu/post/sz%C3%A9chenyi-istv%C3%A1n-egyetem-auton%C3%B3m-robotj%C3%A1rm%C5%B1veket-programoztak-a-versenyz%C5%91-di%C3%A1kok-a-zalazone-on">uni.sze.hu/post/széchenyi-istván-egyetem-autonóm-robotjarműveket-programoztak-a-versenyző-diákok-a-zalazone-on</a>
-      </li>
-      <li><a
-          href="https://www.kisalfold.hu/helyi-kozelet/2023/04/szechenyi-istvan-egyetem-autonom-robotjarmuveket-programoztak-a-versenyzo-diakok-a-zalazone-on-galeria">kisalfold.hu/helyi-kozelet/2023/04/szechenyi-istvan-egyetem-autonom-robotjarmuveket-programoztak-a-versenyzo-diakok-a-zalazone-on-galeria</a>
-      </li>
-      <li><a
-          href="https://iotmagazin.hu/ipar/2023/04/28/autonom-robot-zalazone/">iotmagazin.hu/ipar/2023/04/28/autonom-robot-zalazone</a>
-      </li>
-      <li><a
-          href="https://www.zaol.hu/helyi-kozelet/2023/04/autonom-jarmuvekkel-versenyeztek-zalaegerszegen">zaol.hu/helyi-kozelet/2023/04/autonom-jarmuvekkel-versenyeztek-zalaegerszegen</a>
-      </li>
-    </ul>
+    <div class="w3-col m6 s12" style="margin-bottom:20px;">
+      <a href="https://sze-info.github.io/ajr/"
+         class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round button-card"
+         style="width:100%; min-height:130px; display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:18px; white-space:normal;">
+        <i class="fa fa-robot" style="font-size:26px; margin-bottom:8px;"></i>
+        <span>Hasznos<br>ROS 2 oktatóanyagok</span>
+        <div class="button-desc">
+          ROS 2 alapok és robotprogramozási példák a felkészüléshez.
+        </div>
+      </a>
+    </div>
 
+    <div class="w3-col m6 s12" style="margin-bottom:20px;">
+      <a href="https://jkk-research.github.io/workshops/f1tenth_sim_a/" target="_blank"
+         class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round button-card"
+         style="width:100%; min-height:130px; display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:18px; white-space:normal;">
+        <i class="fa fa-play" style="font-size:26px; margin-bottom:8px;"></i>
+        <span>Szimulációs<br>workshop</span>
+        <div class="button-desc">
+          Szimulációs környezetben előre kipróbálható megoldások és gyakorlati példák (nem kötelező).
+        </div>
+      </a>
+    </div>
 
-    </p>
+    <div class="w3-col m6 s12" style="margin-bottom:20px;">
+      <a href="https://jkk-research.github.io/workshops/wheeltec_real_b/"
+         class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round button-card"
+         style="width:100%; min-height:130px; display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:18px; white-space:normal;">
+        <i class="fa fa-book" style="font-size:26px; margin-bottom:8px;"></i>
+        <span>Instrukciók<br>versenyhez</span>
+        <div class="button-desc">
+          Részletes technikai és szervezési útmutató a helyszíni versenyhez.
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+    <div style="max-width: 800px; margin: auto;">
+  <p class="w3-text-gray" style="line-height: 1.6; text-align: justify;">
+    A Széchenyi István Egyetem és partnerei országos autonóm robotversenyt
+    hirdetnek középiskolai csapatok számára. Az Autonóm Robotverseny a
+    Széchenyi István Egyetem <strong>Future Engineer</strong> programjának
+    keretében megvalósuló műszaki-informatikai megmérettetés, amely során a
+    résztvevők valós robotokkal, helyszíni környezetben bizonyíthatják tudásukat.
+  </p>
+
+  <p class="w3-text-gray" style="line-height: 1.6; text-align: justify;">
+    A program célja, hogy lehetőséget biztosítson a középiskolás diákok számára
+    az önvezető járművekhez kapcsolódó műszaki és informatikai kihívások
+    megismerésére, miközben gyakorlati tapasztalatot szereznek kisméretű,
+    alacsony sebességű kültéri mobil robotplatformok alkalmazásán keresztül.
+  </p>
+</div>
+    
     <p><img src="img/robotanim01.gif" class="center"></p>
 
 
@@ -306,20 +331,7 @@
 
 
   <!-- Second Parallax Image with images Text -->
-  <div class="bgimg-2 w3-display-container">
-    <div class="w3-display-middle">
-      <span class="w3-xxlarge w3-text-white w3-wide">🏆 Eredmények</span>
-    </div>
-  </div>
-
-  <!-- Container (mission Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="eredmenyek">
-    <div style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;">
-      <p>
-        Aktuális <a href="https://robotverseny.github.io/eredmenyek.html">eredmények</a>:
-      </p>
-      <iframe src="eredmenyek.html" scrolling="yes" height="600" width="100%" title="eredmenyek"
-        style="border:none;overflow:visible;overflow-y:scroll;"></iframe>
+  
 
     </div>
     <div class="w3-center">
@@ -346,30 +358,130 @@
 
   <!-- Container (szabályzat) -->
   <div class="w3-content w3-container w3-padding-64" id="szabalyzat">
-    <p>
-      Magyarországon középiskolai tanulmányokat folytató
-      diákokból álló csapatok jelentkezését várjuk. A
-      Versenyre történő jelentkezésnek szakmai, ismeretekre
-      vonatkozó előfeltétele, előkövetelménye nincs.
-    </p>
-    <p> A verseny két módon valósítható meg:
-    <ul>
-      <li>Online forduló, ahol egy szimulátorban versenyeznek a csapatok.</li>
-      <li>Helyszíni forduló, amely során a csapatok valós robotokkal, valós pályán versenyezhetnek.</li>
-    </ul>
-    </p>
+      
 
-    <p class="w3-text-gray">
-      Az online verseny példamegoldása mindenki számára elérhető: <a
-        href="https://robotverseny.github.io/megoldas_sim22/">https://robotverseny.github.io/megoldas_sim22/</a>. <br />
-        Hasonlóképp, a helyszíni verseny példamegoldása is elérhető: <a
-        href="https://robotverseny.github.io/megoldas_gyor24/">https://robotverseny.github.io/megoldas_gyor24/</a>.
-      <br />
-      Mindkét lebonyolítási forma (online és helyszíni) egyszerű falkövetést jelent lézerszkenner segítségével, de a megoldás
-      hangolásával is sokat lehet javítani az eredményen, minimális programozási ismeretekkel.
-    </p>
+<h3>1. Általános információk</h3>
+<p>
+Magyarországon középiskolai tanulmányokat folytató diákokból álló csapatok jelentkezését várjuk a 
+Széchenyi István Egyetem Future Engineer programján keresztül. A Versenyre történő jelentkezésnek szakmai, ismeretekre
+vonatkozó előfeltétele, előkövetelménye nincs. Az Autonóm Robotverseny célja, hogy a résztvevő középiskolai csapatok
+valós környezetben mérjék össze tudásukat autonóm robotirányítás területén. A versenyzés ötfős csapatokban történik. 
+A csapatok kialakítására a verseny napján kerül sor, a csapatok összetétele a versenynap elején rögzítésre kerül, a nap folyamán indokolt esetben módosítható.
+A verseny során minden csapat azonos típusú robotplatformot használ.
+</p>
 
+<h3>2. Robotplatform</h3>
+<ul>
+  <li>Minden csapat számára azonos típusú <strong>Wheeletec Rosbot Pro</strong> robot áll rendelkezésre.</li>
+  <li>A robotok előre telepített szoftverkörnyezettel kerülnek átadásra.</li>
+  <li>A robot <strong>hardveres módosítása nem megengedett</strong>.</li>
+</ul>
+
+<h3>3. Szoftver és felkészülés</h3>
+<ul>
+  <li>A szervezők két példamegoldást biztosítanak a résztvevők számára.</li>
+  <li>A csapatok feladata ezen megoldások megértése és hangolása.</li>
+  <li>A jobb teljesítmény optimalizálással és finomhangolással érhető el.</li>
+</ul>
+
+<h3>4. Szabadedzés</h3>
+<ul>
+  <li>A versenyt megelőzően szabadedzés áll rendelkezésre.</li>
+  <li>A pálya ebben az időszakban szabadon használható.</li>
+  <li>A csapatok kötelesek egymás robotjaira és a pályára fokozottan figyelni.</li>
+</ul>
+
+<h3>5. Verseny menete</h3>
+<ul>
+  <li>Minden csapat <strong>két mérési lehetőséget</strong> kap.</li>
+  <li>A próbák során a robot egy adott időtartam alatt teljesített körök száma kerül mérésre.</li>
+  <li>
+    Egy körnek számít, amikor a robot teljesíti a pályát és a kijelölt
+    <strong>start/cél vonalat ugyanabba az irányba ismét áthaladva</strong> metszi.
+  </li>
+  <li>A győztes az a csapat, amely a legtöbb kört teljesíti.</li>
+  <li>Azonos körszám esetén a <strong>legjobb köridő</strong> dönt.</li>
+</ul>
+
+<h3>6. Pályahasználat és beavatkozás</h3>
+<ul>
+  <li>A robot működése közben a csapat <strong>nem avatkozhat be</strong>, kivéve az alábbi eseteket.</li>
+  <li>
+    Amennyiben a robot a pálya falának ütközik és a pálya elmozdul,
+    a csapat köteles a pályát visszaigazítani, majd a robotot az érintés helyétől folytatni.
+  </li>
+  <li>Az ilyen beavatkozás során <strong>az időmérés nem áll meg</strong>.</li>
+  <li>
+    Amennyiben a robot érinti a falat, de az nem mozdul el,
+    a robot a próbát megszakítás nélkül folytathatja.
+  </li>
+  <li>
+    A robot <strong>nem érinthető meg</strong>, ha nem történt pályaelmozdulás.
+  </li>
+</ul>
+
+<h3>7. Biztonság és fair play</h3>
+<ul>
+  <li>A csapatok kötelesek a fair versenyzés szabályait betartani.</li>
+  <li>Tilos más csapatok munkájának akadályozása.</li>
+</ul>
   </div>
+
+  <div class="bgimg-3 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">📜 Programterv</span>
+    </div>
+  </div>
+
+  <div class="w3-content w3-padding-32" style="max-width:800px">
+
+    <p class="w3-text-gray w3-large" style="text-align:center; margin-bottom:24px;">
+      <strong>Időpont:</strong> 2026. június 4. (csütörtök) 9:30-15:00 <br />
+      <strong>Helyszín:</strong> Széchenyi István Egyetem, Egyetemi Könyvtár, Győr
+    </p>
+
+  <table class="w3-table-all w3-bordered w3-centered">
+    <thead>
+      <tr class="w3-light-grey">
+        <th>Idő</th>
+        <th>Tevékenység</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>9:30 – 10:00</td>
+        <td>Érkezés, csapatok kialakulása, munkahelyek elfoglalása</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>10:00 – 10:20</td>
+        <td>Támogatók és a Járműipari Kutatóközpont bemutatkozása</td>
+      </tr>
+      <tr>
+        <td>10:20 – 10:40</td>
+        <td>Robotok működésének, használatának rövid ismertetése</td>
+      </tr>
+      <tr>
+        <td>10:40 – 12:30</td>
+        <td>Tesztelés, szabadedzés</td>
+      </tr>
+      <tr>
+        <td>12:30 – 13:30</td>
+        <td>Ebéd</td>
+      </tr>
+      <tr>
+        <td>13:30 – 14:30</td>
+        <td>Verseny</td>
+      </tr>
+      <tr>
+        <td>14:30 – 15:00</td>
+        <td>Eredményhirdetés</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
 
   <div class="bgimg-3 w3-display-container">
     <div class="w3-display-middle">
@@ -404,6 +516,7 @@
     </div>
   </div>
 
+  
 
 
   <div class="bgimg-3 w3-display-container">
@@ -421,7 +534,7 @@
     </p>
     <p>
     <ul>
-      <li>II. Autonóm robotverseny - online forduló: Időpont bejelentése később. </li>
+      <li>IV. Future Engineer Autonóm Robotverseny - 2026. június 4. (Győr, Széchenyi István Egyetem, Egyetemi Könyvtár)</li>
 
     </ul>
 
@@ -430,6 +543,8 @@
       <i>Korábbi események:</i>
     </p>
     <ul>
+      <li> <a href="https://jkk-web.sze.hu/sikerrel-zarult-az-autonom-robotverseny-a-szechenyi-istvan-egyetemen/">III. Future Engineer Autonóm Robotverseny - 2025. június 4. (Győr, Széchenyi István Egyetem, Egyetemi Könyvtár)</a></li>
+      <li>II. Future Engineer Autonóm Robotverseny - 2024. június 5. (Győr, Széchenyi István Egyetem)</li>
       <li>I. Autonóm robotverseny - helyszíni forduló - 2023. április 20-21. (<a
           href="https://www.google.com/maps/place/ZalaZone/@46.8895951,16.8369234,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipPzUe69ewEva-5tzBV9Sjij_FlLPWEf7FjKFa2S!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPzUe69ewEva-5tzBV9Sjij_FlLPWEf7FjKFa2S%3Dw203-h152-k-no!7i1440!8i1080!9m2!1b1!2i40!4m7!3m6!1s0x476929598d135193:0x5681bfbee9c4ee6c!8m2!3d46.8895951!4d16.8369234!10e5!16s%2Fg%2F11gjs1rmcm">ZalaZone
           Járműipari Tesztpálya, Zalaegerszeg</a>) </li>
@@ -452,18 +567,34 @@
   <!-- Container (English) -->
   <div class="w3-content w3-container w3-padding-64" id="english">
     <p>
-      Autonomous robotrace (Autonóm robotverseny) is a hungarian competition organized by the Széchenyi István
-      University and its partners.
-      It is inspired by the <a href="https://f1tenth.org/">F1/10</a> Autonomous Racing competition. Any hungarian
-      middle school / junior secondary school can participate.
-    </p>
-    <p> The competition can be organized as an online challenge based on a simulator, or as an on-site programming competition with real robots.
-    <ul>
-      <li>Online competition, where teams compete in a simulator.</li>
-      <li>On-site competition, where they can compete with real robots on a real
-        track.</li>
-    </ul>
-    </p>
+  The <strong>Autonomous Robot Competition</strong> is a national-level event
+  organized by Széchenyi István University and its partners as part of the
+  <strong>Future Engineer program</strong>.
+</p>
+
+<p>
+  The competition is designed for high school students and focuses on
+  real-world autonomous robotics challenges. Participants work in teams and
+  control identical robot platforms (<strong>Wheeletec Rosbot Pro</strong>)
+  in an on-site environment.
+</p>
+
+<p>
+  Teams are provided with pre-installed software and two example solutions.
+  The goal is to understand, modify, and optimize these solutions in order to
+  achieve the best performance on a real track.
+</p>
+
+<p>
+  During the competition, robots must complete as many laps as possible within
+  a given time. In case of a tie, the best lap time determines the winner.
+</p>
+
+<p class="w3-text-gray">
+  The event provides students with hands-on experience in autonomous systems,
+  robotics, and software development, while introducing them to real engineering
+  challenges in a controlled environment.
+</p>
     <p class="w3-text-gray">
       The example solution (in Hungarian) for the online competition is avaiable here: <a
         href="https://robotverseny.github.io/megoldas_sim22/">https://robotverseny.github.io/megoldas_sim22/</a>. <br />

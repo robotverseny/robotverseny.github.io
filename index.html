@@ -498,6 +498,92 @@
 
 
   <!-- Second Parallax Image with images Text -->
+
+  <div class="bgimg-3 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">⚡ Gyorsindítás</span>
+    </div>
+  </div>
+
+  <!-- Container (gyorsindítási segédlet) -->
+  <div class="w3-content w3-container w3-padding-64" id="gyorsinditas">
+    <div class="quickstart-hero">
+      <h2 style="margin-top:0;">Gyorsindító segédlet</h2>
+      <p style="margin-bottom:0;">Kapcsolódás a robothoz és az eszközök indítása az Autonóm Robotversenyhez.</p>
+    </div>
+
+    <div class="quickstart-lead">
+      <h3 style="margin-top:0;">Mire lesz szükséged?</h3>
+      <ul>
+        <li>A saját vagy a csapat által használt laptopra.</li>
+        <li>A kiosztott, bekapcsolt Wheeltec robotra.</li>
+        <li>A roboton lévő matricára: ezen találod a robot Wi-Fi nevét, IP-címét és sorszámát.</li>
+      </ul>
+    </div>
+
+    <h3 class="w3-center">9 lépés a sikeres induláshoz</h3>
+
+    <div class="quickstart-grid">
+      <div class="quickstart-card">
+        <div class="quickstart-step-title"><span class="quickstart-badge">1</span><h4>Csatlakozás a robot Wi-Fi hotspotjára</h4></div>
+        <p>Csatlakozz ahhoz a Wi-Fi hálózathoz, amelyet a robot sugároz. A pontos hálózatnév a robot matricáján látható.</p>
+        <p>Példa: <span class="quickstart-inline-code">wheeltec_robo_barna_108</span></p>
+      </div>
+
+      <div class="quickstart-card">
+        <div class="quickstart-step-title"><span class="quickstart-badge">2</span><h4>Terminál megnyitása</h4></div>
+        <p>Nyiss meg egy terminálablakot a saját számítógépeden. Innen fogsz SSH-kapcsolatot indítani a robot fedélzeti számítógépére.</p>
+      </div>
+
+      <div class="quickstart-card">
+        <div class="quickstart-step-title"><span class="quickstart-badge">3</span><h4>SSH kapcsolat indítása</h4></div>
+        <p>A felhasználónév mindig <span class="quickstart-inline-code">wheeltec</span>. Az IP-címet cseréld a saját robotod címére.</p>
+        <code class="quickstart-code">ssh wheeltec@192.168.0.108</code>
+      </div>
+
+      <div class="quickstart-card">
+        <div class="quickstart-step-title"><span class="quickstart-badge">4</span><h4>A kezelőfelület indítása</h4></div>
+        <p>Miután bejelentkeztél a robotra, indítsd el a grafikus kezelőfelületet.</p>
+        <code class="quickstart-code">megoldas_gui</code>
+      </div>
+
+      <div class="quickstart-card">
+        <div class="quickstart-step-title"><span class="quickstart-badge">5</span><h4>GUI megnyitása böngészőben</h4></div>
+        <p>A saját géped böngészőjében a robot IP-címét használd. Ne a <span class="quickstart-inline-code">localhost</span> címet nyisd meg.</p>
+        <code class="quickstart-code">http://192.168.0.108:8050</code>
+      </div>
+
+      <div class="quickstart-card">
+        <div class="quickstart-step-title"><span class="quickstart-badge">6</span><h4>Új terminálablak nyitása</h4></div>
+        <p>A GUI futtatásához használt terminált hagyd nyitva. A további parancsokhoz nyiss egy teljesen új terminálablakot.</p>
+      </div>
+
+      <div class="quickstart-card">
+        <div class="quickstart-step-title"><span class="quickstart-badge">7</span><h4>ROS_DOMAIN_ID beállítása</h4></div>
+        <p>Az érték a robot sorszámához igazodik: például <span class="quickstart-inline-code">...108</span> esetén <span class="quickstart-inline-code">8</span>, <span class="quickstart-inline-code">...112</span> esetén <span class="quickstart-inline-code">12</span>.</p>
+        <code class="quickstart-code">export ROS_DOMAIN_ID=8</code>
+      </div>
+
+      <div class="quickstart-card">
+        <div class="quickstart-step-title"><span class="quickstart-badge">8</span><h4>RViz indítása</h4></div>
+        <p>Ugyanabból a terminálból indítsd el, amelyben beállítottad a ROS_DOMAIN_ID értékét.</p>
+        <code class="quickstart-code">ros2 run rviz2 rviz2</code>
+      </div>
+
+      <div class="quickstart-card">
+        <div class="quickstart-step-title"><span class="quickstart-badge">9</span><h4>Konfiguráció betöltése</h4></div>
+        <p>Az RViz ablakban töltsd be az előre elkészített nézetet:</p>
+        <p><strong>File → Open Config →</strong> <span class="quickstart-inline-code">robotverseny.rviz</span></p>
+      </div>
+    </div>
+
+    <div class="quickstart-warning">
+      <h4>💡 Gyakori hibák / tippek</h4>
+      <p><strong>Nem tölt be a Control Panel?</strong> Ellenőrizd, hogy a robot Wi-Fi hálózatára csatlakoztál, és a megfelelő IP-címet írtad be a <span class="quickstart-inline-code">:8050</span> porttal.</p>
+      <p><strong>Nem látod a robot adatait RViz-ben?</strong> Ellenőrizd, hogy az <span class="quickstart-inline-code">export ROS_DOMAIN_ID=...</span> parancsot abban a terminálban futtattad-e, amelyből az RViz-t indítottad. Minden új terminálnál újra be kell állítani.</p>
+    </div>
+  </div>
+
   
 
   

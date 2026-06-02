@@ -223,6 +223,24 @@
     }
   }
 
+
+
+  /* Gyorsindítási segédlet */
+  .quickstart-hero { background: #242943; color: #ffffff; border-radius: 10px; padding: 28px 32px; margin-bottom: 24px; box-shadow: 0 4px 18px rgba(36, 41, 67, 0.18); }
+  .quickstart-lead { background: #eaf8fc; border-left: 6px solid #50ADC9; border-radius: 8px; padding: 18px 22px; margin: 22px 0 30px 0; }
+  .quickstart-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .quickstart-card { background: #ffffff; border-radius: 10px; box-shadow: 0 4px 18px rgba(36, 41, 67, 0.16); padding: 20px; border-top: 4px solid #50ADC9; min-height: 245px; }
+  .quickstart-step-title { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .quickstart-badge { display: inline-flex; width: 36px; height: 36px; align-items: center; justify-content: center; border-radius: 50%; background: #50ADC9; color: #ffffff; font-weight: 700; flex: 0 0 auto; }
+  .quickstart-card h4 { margin: 0; color: #242943; }
+  .quickstart-card p { color: #555555; line-height: 1.55; }
+  .quickstart-code { display: block; background: #242943; color: #ffffff; padding: 11px 13px; border-radius: 7px; font-family: Consolas, Monaco, monospace; font-size: 14px; line-height: 1.4; overflow-x: auto; margin-top: 12px; }
+  .quickstart-inline-code { background: #f4eef5; color: #b2396b; padding: 2px 6px; border-radius: 4px; font-family: Consolas, Monaco, monospace; font-size: 0.95em; }
+  .quickstart-warning { background: #fff3cd; border-left: 6px solid #f0c24b; border-radius: 8px; padding: 18px 22px; margin-top: 26px; }
+  .quickstart-warning h4 { margin-top: 0; }
+  @media (max-width: 900px) { .quickstart-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .quickstart-grid { grid-template-columns: 1fr; } .quickstart-card { min-height: auto; } .quickstart-hero { padding: 22px; } }
+
 </style>
 
 <body style="overflow:auto;">
@@ -239,6 +257,8 @@
           class="fa fa-file"></i> Szabályzat</a>
       <a href="#events" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
           class="fa fa-calendar-check-o"></i> Események</a>
+      <a href="#gyorsinditas" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
+          class="fa fa-bolt"></i> Gyorsindítás</a>
       <a href="#terkep" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
           class="fa fa-map-marker"></i> Térkép</a>
       <a href="#kepek" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i
@@ -267,6 +287,8 @@
       </a>
       <a href="#szabalyzat" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-file"></i>
         Szabályzat</a>
+      <a href="#gyorsinditas" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i class="fa fa-bolt"></i>
+        Gyorsindítás</a>
       <a href="https://felveteli.sze.hu/robotverseny" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue"><i
           class="fa fa-university" aria-hidden="true"></i> felveteli.sze.hu</a>
     </div>
@@ -497,7 +519,6 @@
 
 
 
-  <!-- Second Parallax Image with images Text -->
 
   <div class="bgimg-3 w3-display-container">
     <div class="w3-display-middle">
@@ -507,21 +528,16 @@
 
   <!-- Container (gyorsindítási segédlet) -->
   <div class="w3-content w3-container w3-padding-64" id="gyorsinditas">
-    <div class="quickstart-hero">
-      <h2 style="margin-top:0;">Gyorsindító segédlet</h2>
-      <p style="margin-bottom:0;">Kapcsolódás a robothoz és az eszközök indítása az Autonóm Robotversenyhez.</p>
-    </div>
+
 
     <div class="quickstart-lead">
       <h3 style="margin-top:0;">Mire lesz szükséged?</h3>
       <ul>
-        <li>A saját vagy a csapat által használt laptopra.</li>
+        <li>Acsapat által használt laptopra.</li>
         <li>A kiosztott, bekapcsolt Wheeltec robotra.</li>
         <li>A roboton lévő matricára: ezen találod a robot Wi-Fi nevét, IP-címét és sorszámát.</li>
       </ul>
     </div>
-
-    <h3 class="w3-center">9 lépés a sikeres induláshoz</h3>
 
     <div class="quickstart-grid">
       <div class="quickstart-card">
@@ -532,7 +548,7 @@
 
       <div class="quickstart-card">
         <div class="quickstart-step-title"><span class="quickstart-badge">2</span><h4>Terminál megnyitása</h4></div>
-        <p>Nyiss meg egy terminálablakot a saját számítógépeden. Innen fogsz SSH-kapcsolatot indítani a robot fedélzeti számítógépére.</p>
+        <p>Nyiss meg egy terminálablakot a laptopon. Innen fogsz SSH-kapcsolatot indítani a robot fedélzeti számítógépére.</p>
       </div>
 
       <div class="quickstart-card">
@@ -584,6 +600,8 @@
     </div>
   </div>
 
+
+  <!-- Second Parallax Image with images Text -->
   
 
   
